@@ -11,3 +11,9 @@ div{
   height: 400px;
   width: 100%;
 }
+
+#myHeader{
+  border-style:solid;
+  border-width: medium;
+  border-color: lightblue;
+}

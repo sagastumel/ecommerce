@@ -55,7 +55,7 @@ for (var bikes = 0; bikes < bikeArray.length; bikes++) {
   //class attributes
   image.className = 'img-responsive';
   btn.className = 'btn btn-primary btn-lg';
-  newItem.className = 'col=sm-4';
+  newItem.className = 'col-sm-4';
   newDiv.className = 'bikeName' + [bikes] + 'thumbnail';
 
   //adding text to my Elements
@@ -81,25 +81,69 @@ for (var bikes = 0; bikes < bikeArray.length; bikes++) {
 
 }
 
-//
-// //Bike Construc
-//
-// var div1 = document.createElement('div');
-// document.getElementById('java').appendChild(div1);
-//
-// // BEANIES
-// var div2 = document.createElement('div');
-// document.getElementById('java').appendChild(div2);
-//
-// // SHIRTS
-// var div3 = document.createElement('div');
-// document.getElementById('java').appendChild(div3);
-//
-// // PANTS
-// var div4 = document.createElement('div');
-//
-// document.getElementById('java').appendChild(div4);
 
-// // SHOES
-// var div5 = document.createElement('div');
-// document.getElementById('java').appendChild(div5)
+//function for beanies
+function Beanie(name, price, stock, image) {
+  this.name = name;
+  this.price = price;
+  this.stock = stock;
+  this.image = image;
+}
+
+//contructor notation for beanies
+
+var blackbeanie = new Beanie('Black Beanie', 15, 20, 'img/beanies/beanie1.jpg');
+var graybeanie = new Beanie('Grey Beanie', 5, 40, 'img/beanies/beanie2.jpg');
+var whitebeanie = new Beanie('White Beanie', 20, 10, 'img/beanies/beanie3.jpg');
+
+//Array for beanies
+
+var beanieArray = [blackbeanie, graybeanie, whitebeanie];
+
+// beanie for forloop
+
+for (var i = 0; i < beanieArray.length; i++) {
+  var newItem = document.createElement('div');
+  var newDiv = document.createElement('div');
+  var nameH1 = document.createElement('h1');
+  var priceH3 = document.createElement('h3');
+  var stockH4 = document.createElement('h4');
+  var btn = document.createElement('button');
+  var image = document.createElement('img');
+
+  // text for beanie Elements
+
+  var beanieName = document.createTextNode(beanieArray[i].name);
+  var beaniePrice = document.createTextNode('Price : $' + beanieArray[i].price);
+  var beanieStock = document.createTextNode('Stock : ' + beanieArray[i].stock);
+  var beanieImage = document.createTextNode(' ' + beanieArray[i].image);
+  var beanieBTN = document.createTextNode('Wear Now');
+
+  image.src = beanieArray[i].image;
+
+  image.className = 'img-responsive';
+  btn.className = 'btn btn-primary btn-lg';
+  newItem.className = 'col-sm-4';
+  newDiv.className = 'bikeName' + [i] + 'thumbnail';
+
+  // appending children for beanie
+
+  nameH1.appendChild(beanieName);
+  priceH3.appendChild(beaniePrice);
+  stockH4.appendChild(beanieStock);
+  btn.appendChild(beanieBTN);
+
+  // adding elemnts to out divs
+
+  newDiv.appendChild(nameH1);
+  newDiv.appendChild(image);
+  newDiv.appendChild(priceH3);
+  newDiv.appendChild(stockH4);
+  newDiv.appendChild(btn);
+
+  //adding divs to new item dive
+  newItem.appendChild(newDiv);
+
+  // adding new item to the element
+  document.getElementById('beanie').appendChild(newItem);
+}
