@@ -1,19 +1,32 @@
 body{
   text-align: center;
+  background-color: navy;
 }
 
 h1{
   text-align: center;
-  color: lightblue;
+  color: black;
 }
 
 div{
-  height: 400px;
-  width: 100%;
+  height: auto;
+  border: 1px solid black;
 }
 
 #myHeader{
   border-style:solid;
   border-width: medium;
-  border-color: lightblue;
+  border-color: black;
+  background-color: lightblue;
+}
+div{
+  position: relative;
+  margin: 5px 0;
+}
+
+.changeColor{
+  background-color: grey;
+}
+.row{
+  background-color: lightblue;
 }

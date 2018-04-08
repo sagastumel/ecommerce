@@ -73,7 +73,8 @@ for (var i = 0; i < itemArray.length; i++) {
   btn.className = 'btn btn-primary btn-lg';
   newItem.className = 'col-sm-4';
   newDiv.className = 'itemName' + [i] + 'thumbnail';
-
+  newDiv.className = 'changeColor';
+  
   //adding text to my Elements
   nameH1.appendChild(itemName);
   priceH3.appendChild(itemPrice);
