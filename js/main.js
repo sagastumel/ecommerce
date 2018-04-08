@@ -18,18 +18,34 @@ function Item(name, price, stock, image) {
   this.image = image;
 }
 
-// cronstructor notation for bikes
+// onstructor notation for all items
 
-var blackbike = new Item('Black bike', '$ 150', '10', 'img/bikes/bike1.jpg');
-var orangebike = new Item('Orange bike', '$ 125', '5', 'img/bikes/bike2.jpg');
-var bluebike = new Item('Blue bike', '$ 100', '10', 'img/bikes/bike3.jpg');
+var blackbike = new Item('Black bike', '$ 150', 10, 'img/bikes/bike1.jpg');
+var orangebike = new Item('Orange bike', '$ 125', 5, 'img/bikes/bike2.jpg');
+var bluebike = new Item('Blue bike', '$ 100', 10, 'img/bikes/bike3.jpg');
 
 //plasing beanie information in here to see if i can create one full working code
-var blackbeanie = new Item('Black Beanie', 15, 20, 'img/beanies/beanie1.jpg');
-var graybeanie = new Item('Grey Beanie', 5, 40, 'img/beanies/beanie2.jpg');
-var whitebeanie = new Item('White Beanie', 20, 10, 'img/beanies/beanie3.jpg');
+var blackbeanie = new Item('Black Beanie', '$ 15', 20, 'img/beanies/beanie1.jpg');
+var graybeanie = new Item('Grey Beanie', '$ 5', 40, 'img/beanies/beanie2.jpg');
+var whitebeanie = new Item('White Beanie', ' $ 20', 10, 'img/beanies/beanie3.jpg');
+
+//added shirt information
+var blueCheckeredShirt = new Item('Blue Checkered Shirt', '$ 25', 15, 'img/shirts/shirt1.jpg');
+var grayCheckeredShirt = new Item('Gray Checkered Shirt', ' $ 20', 20, 'img/shirts/shirt3.jpg');
+var whiteGraySleeve = new Item('White Gray Sleeve', '$ 10', 30, 'img/shirts/shirt2.jpg');
+
+//variables for pants
+var bluePants = new Item('Blue Pants', '$ 30', 25, 'img/pants/jean2.jpg');
+var lightbluePants = new Item('Light Blue Pants', '$ 40', 20, 'img/pants/jean1.jpg');
+var acidbluePants = new Item('Acid Blue Pants', '$ 50', 15, 'img/pants/jean3.jpg');
+
+//variables for shoes
+var nikeShoe = new Item("Dark Gray Nike's", '$ 40', 20, 'img/shoes/shoe1.jpg');
+var vansShoe = new Item('Black Vans', '$ 30', 25, 'img/shoes/shoe2.jpg');
+var jordanShoe = new Item('Black n Blue Jordans', '$ 80', 10, 'img/shoes/shoe3.jpg');
+
 //Array for all items
-var itemArray = [blackbike, orangebike, bluebike, blackbeanie, graybeanie, whitebeanie];
+var itemArray = [blackbike, orangebike, bluebike, blackbeanie, graybeanie, whitebeanie, blueCheckeredShirt, grayCheckeredShirt, whiteGraySleeve, bluePants, lightbluePants, acidbluePants, nikeShoe, vansShoe, jordanShoe];
 
 //forloop for bike Array
 for (var i = 0; i < itemArray.length; i++) {
@@ -40,7 +56,8 @@ for (var i = 0; i < itemArray.length; i++) {
   var stockH4 = document.createElement('h4');
   var btn = document.createElement('button');
   var image = document.createElement('img');
-// TODO: change the forloop above with the proper elements that will be used.
+
+  // TODO: change the forloop above with the proper elements that will be used.
   //Elements for Text
 
   var itemName = document.createTextNode(itemArray[i].name);
@@ -77,7 +94,6 @@ for (var i = 0; i < itemArray.length; i++) {
   document.getElementById('item').appendChild(newItem);
 
 }
-
 
 // //function for beanies
 // function Beanie(name, price, stock, image) {
